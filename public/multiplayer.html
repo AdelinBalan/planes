@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Top Gun2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Tinos:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      let gameMode = "multiPlayer";
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="player p1">
+        Player 1
+        <div class="connected">Connected</div>
+        <div class="ready">Ready</div>
+      </div>
+
+      <div class="player p2">
+        Player 2
+        <div class="connected">Connected</div>
+        <div class="ready">Ready</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="plane-grid grid-user"></div>
+      <div class="plane-grid grid-computer"></div>
+    </div>
+
+    <div class="container hidden-info">
+      <div class="setup-buttons" id="setup-buttons">
+        <button id="start" class="btn">Start Game</button>
+        <button id="rotate" class="btn">Rotate Your Ships</button>
+      </div>
+      <h3 id="whose-go" class="info-text">Your Go</h3>
+      <h3 id="info" class="info-text"></h3>
+    </div>
+
+    <div class="container">
+      <div class="grid-display">
+        <div class="plane falcon-container" draggable="true">
+          <div id="falcon-0"></div>
+          <div id="falcon-1"></div>
+        </div>
+        <div class="plane raptor-container" draggable="true">
+          <div id="raptor-0"></div>
+          <div id="raptor-1"></div>
+          <div id="raptor-2"></div>
+        </div>
+        <div class="plane typhoon-container" draggable="true">
+          <div id="typhoon-0"></div>
+          <div id="typhoon-1"></div>
+          <div id="typhoon-2"></div>
+        </div>
+        <div class="plane suhoi-container" draggable="true">
+          <div id="suhoi-0"></div>
+          <div id="suhoi-1"></div>
+          <div id="suhoi-2"></div>
+          <div id="suhoi-3"></div>
+        </div>
+        <div class="plane hornet-container" draggable="true">
+          <div id="hornet-0"></div>
+          <div id="hornet-1"></div>
+          <div id="hornet-2"></div>
+          <div id="hornet-3"></div>
+          <div id="hornet-4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
